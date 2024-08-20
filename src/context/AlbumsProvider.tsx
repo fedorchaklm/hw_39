@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState, PropsWithChildren } from "react";
 import { Album } from "../types";
 
-export const AlbumsContext = createContext<Array<Album>>([]);
+export const AlbumsContext = createContext<Album[] | null>(null);
 
 export default function AlbumsProvider({ children }: PropsWithChildren) {
   const [albums, setAlbums] = useState<Array<Album>>([]);
